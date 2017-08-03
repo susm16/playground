@@ -16,7 +16,7 @@ public class VisitorCnt {
 
 	private static int cnt = 0;
 	private static Client client = ClientBuilder.newClient();
-	private static String target = "http://localhost:8080/myrest/";
+	private static String target = "http://localhost:8123/myrest/";
 	
 	
 	@GET
