@@ -18,7 +18,7 @@ public class IntegrationSuite {
 	
 	@BeforeClass
 	public static void setup() throws Exception{
-		server = new Server(8181);
+		server = new Server(8123);
 		ctx = new ServletContextHandler(ServletContextHandler.SESSIONS);
 		ctx.setContextPath("/myrest");
 		ServletHolder servletHolder = ctx.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
@@ -26,7 +26,7 @@ public class IntegrationSuite {
 		servletHolder.setInitParameter("jersey.config.server.provider.packages", "com.maven.rest.myrest");
 		server.setHandler(ctx);
 		server.start();
-		Thread.sleep(5000);
+		Thread.sleep(Integer.valueOf(System.getProperty("delay")));
 	}
 	
 	@AfterClass

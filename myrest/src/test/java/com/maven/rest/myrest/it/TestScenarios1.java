@@ -22,7 +22,7 @@ public class TestScenarios1 {
 		
 		JerseyClient client = JerseyClientBuilder.createClient();
 		
-		Response res = client.target("http://localhost:8181/myrest")
+		Response res = client.target("http://localhost:8123/myrest")
 		.path("/visitors").request(MediaType.TEXT_PLAIN).get();
 		//System.out.println(res.readEntity(String.class));
 		assertTrue(res.readEntity(String.class).contains("empty"));
@@ -33,7 +33,7 @@ public class TestScenarios1 {
 		
 		JerseyClient client = JerseyClientBuilder.createClient();
 		
-		Response res = client.target("http://localhost:8181/myrest")
+		Response res = client.target("http://localhost:8123/myrest")
 		.path("/visitors/register/suma").request(MediaType.TEXT_PLAIN).get();
 		//System.out.println(res.readEntity(String.class));
 		assertTrue(res.readEntity(String.class).contains("suma is visitor no.1***Added first node to the list successfully"));
@@ -44,7 +44,7 @@ public class TestScenarios1 {
 		
 		JerseyClient client = JerseyClientBuilder.createClient();
 		
-		Response res = client.target("http://localhost:8181/myrest")
+		Response res = client.target("http://localhost:8123/myrest")
 		.path("/visitors/register/bob").request(MediaType.TEXT_PLAIN).get();
 		//System.out.println(res.readEntity(String.class));
 		
@@ -57,7 +57,7 @@ public class TestScenarios1 {
 		
 		JerseyClient client = JerseyClientBuilder.createClient();
 		
-		Response res = client.target("http://localhost:8181/myrest")
+		Response res = client.target("http://localhost:8123/myrest")
 		.path("/visitors/register/sam").request(MediaType.TEXT_PLAIN).get();
 		//System.out.println(res.readEntity(String.class));
 		
@@ -68,7 +68,7 @@ public class TestScenarios1 {
 	public void testvcnt4(){
 JerseyClient client = JerseyClientBuilder.createClient();
 		
-		Response res = client.target("http://localhost:8181/myrest")
+		Response res = client.target("http://localhost:8123/myrest")
 		.path("/visitors").request(MediaType.TEXT_PLAIN).get();
 	}
 	
