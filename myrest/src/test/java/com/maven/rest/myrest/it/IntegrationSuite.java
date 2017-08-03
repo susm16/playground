@@ -18,7 +18,7 @@ public class IntegrationSuite {
 	
 	@BeforeClass
 	public static void setup() throws Exception{
-		server = new Server(8080);
+		server = new Server(8181);
 		ctx = new ServletContextHandler(ServletContextHandler.SESSIONS);
 		ctx.setContextPath("/myrest");
 		ServletHolder servletHolder = ctx.addServlet(org.glassfish.jersey.servlet.ServletContainer.class, "/*");
